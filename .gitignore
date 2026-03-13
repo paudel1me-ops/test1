@@ -53,6 +53,10 @@ frontend/.DS_Store
 # Docker
 .dockerignore
 Dockerfile
+!backend/.dockerignore
+!frontend/.dockerignore
+!backend/Dockerfile
+!frontend/Dockerfile
 
 # IDE
 .vscode/
