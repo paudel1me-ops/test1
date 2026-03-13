@@ -1,0 +1,181 @@
+.vehicle-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.vehicle-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.vehicle-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #999;
+}
+
+.vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.vehicle-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.speed-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.speed-badge.idle {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.speed-badge.slow {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.speed-badge.moderate {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.speed-badge.fast {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.metric label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.metric-value.danger {
+  color: #d32f2f;
+}
+
+.metric-value.warning {
+  color: #f57c00;
+}
+
+.metric-value.normal {
+  color: #388e3c;
+}
+
+.tire-panel {
+  background: #f9f9f9;
+  border-top: 2px solid #ddd;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.tire-panel label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.tire-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.tire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.tire span {
+  font-size: 0.75rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.tire strong {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.25rem;
+}
+
+.tire.danger {
+  border-color: #d32f2f;
+  background: #ffebee;
+}
+
+.tire.danger strong {
+  color: #d32f2f;
+}
+
+.tire.warning {
+  border-color: #f57c00;
+  background: #fff3e0;
+}
+
+.tire.warning strong {
+  color: #f57c00;
+}
+
+.tire.normal {
+  border-color: #388e3c;
+  background: #e8f5e9;
+}
+
+.tire.normal strong {
+  color: #388e3c;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
