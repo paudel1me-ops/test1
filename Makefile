@@ -1,4 +1,4 @@
-.PHONY: help up down logs logs-backend logs-frontend restart build build-backend build-frontend test health clean install install-backend install-frontend
+.PHONY: help up down logs logs-backend logs-frontend restart build build-backend build-frontend test health clean install install-backend install-frontend resume-demo
 
 help: ## Show this help message
 	@echo 'Usage: make [target]'
@@ -10,6 +10,9 @@ help: ## Show this help message
 up: ## Start all services with Docker Compose
 	docker-compose up -d
 	@echo "Services started! Access dashboard at http://localhost:3000"
+
+resume-demo: ## Start/recover demo stack and verify readiness
+	bash resume-demo.sh
 
 down: ## Stop all services
 	docker-compose down

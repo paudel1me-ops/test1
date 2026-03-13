@@ -8,6 +8,14 @@ cd /workspaces/test1
 docker-compose up -d
 ```
 
+### Fast Resume (Next Login)
+```bash
+cd /workspaces/test1
+./resume-demo.sh
+```
+
+Use `./resume-demo.sh --fast` to skip image rebuild when you just want to relaunch quickly.
+
 Then open your browser to: **http://localhost:3000**
 
 That's it! You'll see:
