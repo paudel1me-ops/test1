@@ -78,3 +78,6 @@ logs/
 # Any local overrides
 .env.local
 local.env
+
+backend/**/__pycache__/
+backend/**/*.py[cod]
